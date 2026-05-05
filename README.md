@@ -28,27 +28,13 @@ L'objectif était de concevoir et de déployer un contrôleur de domaine sous **
 | | **Mettre à disposition un service informatique** | Déploiement d'un service d'authentification centralisé et résolution de noms (DNS). |
 | **Bloc 3 : Cybersécurité des services informatiques** | **Protéger l'identité numérique de l'organisation** | Sécurisation des sessions via Stratégies de Groupe (GPO) distinctes selon les profils (Profs, Étudiants). |
 
-## 4. Planning de Realisation (Gantt)
+## 4. Cycle de Vie du Projet (Cycle en V)
 
-Le projet s'est déroulé de manière individuelle sur un cycle de 3 semaines (Cycle en V) :
+| Phase | Détails de l'implémentation |
+|:---|:---|
+| **Spécification** | Définition de l'arborescence des OUs et du plan de nommage du domaine. |
+| **Conception** | Architecture du serveur Windows Server 2022 et design des stratégies de groupe (GPO). |
+| **Réalisation** | Installation du rôle AD DS, création des comptes et configuration des GPOs. |
+| **Vérification** | Jonction des postes clients et tests de descente de GPO par profil. |
+| **Exploitation** | Rédaction des guides de gestion utilisateur et procédures de secours. |
 
-```mermaid
-gantt
-    title Planning de Deploiement Active Directory
-    dateFormat  YYYY-MM-DD
-    axisFormat  S%W
-    
-    section Cadrage et Analyse
-    Analyse de l'existant et Risques :done,   des1, 2025-01-05, 5d
-    Validation de l'architecture    :done,   des2, 2025-01-10, 2d
-    
-    section Implementation
-    Deploiement Windows Server 2022 :active, des3, 2025-01-12, 2d
-    Configuration AD DS et DNS       :        des4, 2025-01-14, 2d
-    Creation des OUs et GPO         :        des5, 2025-01-16, 3d
-    
-    section Validation
-    Jonction de postes clients      :        des6, 2025-01-19, 3d
-    Tests de recette et Audit        :        des7, 2025-01-22, 2d
-    Finalisation Documentation      :        des8, 2025-01-24, 2d
-```
